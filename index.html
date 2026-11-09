@@ -5,9 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บแอป</title>
+    <title>WARD IT REQUEST | แจ้งความต้องการพัฒนาระบบสารสนเทศ</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: #f6f9ff;
+        }
+        iframe {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            border: 0;
+        }
+    </style>
 </head>
 <body>
-    <iframe style="width: 100%; height: 100vh;" scrolling="yes" src="https://script.google.com/macros/s/AKfycbxMdy9KA9DjECYe9CiOKdyY4O8DxbQ8twOaCQ-4rKcLMKDu-cNI2R4OD36SZ5FHHegPyQ/exec" frameborder="0"></iframe>
+    <!--
+      IMPORTANT:
+      - ?action=app คือ "routing" ให้ GAS คืนหน้าแอป
+      - ไม่ใช่ authentication — URL นี้ยังมองเห็นได้จาก View Source
+      - ความปลอดภัยจริงอยู่ที่ server-side validation ใน Code.gs
+    -->
+    <iframe
+        src="https://script.google.com/macros/s/AKfycbxMdy9KA9DjECYe9CiOKdyY4O8DxbQ8twOaCQ-4rKcLMKDu-cNI2R4OD36SZ5FHHegPyQ/exec?action=app"
+        scrolling="yes"
+        frameborder="0"
+        allow="clipboard-write"
+        title="WARD IT REQUEST"></iframe>
 </body>
 </html>
