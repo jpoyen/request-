@@ -6,13 +6,15 @@
   <title>WARD IT REQUEST | แจ้งความต้องการพัฒนาระบบสารสนเทศ</title>
   <style>
     html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #f6f9ff; }
-    iframe { display: block; width: 100%; height: 100%; height: 100dvh; border: 0; }
+    #app { width: 100%; height: 100%; }
+    #app iframe { display: block; width: 100%; height: 100vh; height: 100dvh; border: 0; }
+    #fallback { display: none; font: 16px system-ui,sans-serif; padding: 25px; color: #15345a; }
   </style>
+  <script src="./app-loader.js" defer></script>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbxOHTE7c84Ia9kks1_XGWQaLFrbXouf9wf_G3dwnERwicQ7LFKU90lMSGLk_g1HqSC_ZQ/exec"
-          title="WARD IT REQUEST"
-          allow="clipboard-write"
-          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <main id="app" aria-label="WARD IT REQUEST"></main>
+  <noscript>กรุณาเปิดใช้งาน JavaScript เพื่อแสดงแบบฟอร์ม</noscript>
+  <div id="fallback" role="alert">ไม่สามารถโหลดแบบฟอร์มได้ กรุณาตรวจสอบการเชื่อมต่อหรือสิทธิ์เข้าถึงระบบ</div>
 </body>
 </html>
