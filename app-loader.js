@@ -7,7 +7,7 @@
 (function () {
   'use strict';
   // ใส่ Web App URL ของ Deployment ล่าสุดที่ทดสอบว่า /exec เปิดแบบฟอร์มได้จริง
-  const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxMdy9KA9DjECYe9CiOKdyY4O8DxbQ8twOaCQ-4rKcLMKDu-cNI2R4OD36SZ5FHHegPyQ/exec';
+  const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxOHTE7c84Ia9kks1_XGWQaLFrbXouf9wf_G3dwnERwicQ7LFKU90lMSGLk_g1HqSC_ZQ/exec';
 
   function mountApp() {
     const target = document.getElementById('app');
