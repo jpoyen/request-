@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <base target="_top">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WARD IT REQUEST | แจ้งความต้องการพัฒนาระบบสารสนเทศ</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            background: #f6f9ff;
-        }
-        iframe {
-            display: block;
-            width: 100%;
-            height: 100vh;
-            border: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WARD IT REQUEST ระบบแจ้งความต้องการพัฒนาระบบสารสนเทศของหอผู้ป่วย">
+  <title>WARD IT REQUEST | แจ้งความต้องการพัฒนาระบบสารสนเทศ</title>
+  <style>
+    html,body{margin:0;padding:0;height:100%;overflow:hidden;background:#f6f9ff}
+    iframe{display:block;width:100%;height:100%;border:0}
+    #loading{position:fixed;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;
+      gap:12px;background:#f6f9ff;color:#0b3c8c;font:500 15px Tahoma,sans-serif;transition:opacity .25s}
+    #loading.hide{opacity:0;pointer-events:none}
+    .spinner{width:28px;height:28px;border:3px solid #dbe8fb;border-top-color:#1560d6;border-radius:50%;animation:spin .8s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+  </style>
 </head>
 <body>
-    <!--
-      IMPORTANT:
-      - ?action=app คือ "routing" ให้ GAS คืนหน้าแอป
-      - ไม่ใช่ authentication — URL นี้ยังมองเห็นได้จาก View Source
-      - ความปลอดภัยจริงอยู่ที่ server-side validation ใน Code.gs
-    -->
-    <iframe
-        src="https://script.google.com/macros/s/AKfycbxMdy9KA9DjECYe9CiOKdyY4O8DxbQ8twOaCQ-4rKcLMKDu-cNI2R4OD36SZ5FHHegPyQ/exec?action=app"
-        scrolling="yes"
-        frameborder="0"
-        allow="clipboard-write"
-        title="WARD IT REQUEST"></iframe>
+  <!-- action=app เป็น routing เท่านั้น ไม่ใช่ authentication หรือการซ่อน URL -->
+  <div id="loading" role="status" aria-live="polite"><span class="spinner" aria-hidden="true"></span><span>กำลังเปิด WARD IT REQUEST…</span></div>
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbxMdy9KA9DjECYe9CiOKdyY4O8DxbQ8twOaCQ-4rKcLMKDu-cNI2R4OD36SZ5FHHegPyQ/exec?action=app"
+    title="WARD IT REQUEST"
+    scrolling="yes"
+    allow="clipboard-write"
+    onload="document.getElementById('loading').classList.add('hide')"></iframe>
 </body>
 </html>
